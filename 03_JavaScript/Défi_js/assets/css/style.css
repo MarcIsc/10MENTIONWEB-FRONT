@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* contient le padding a l'intérieur de la DIV */
+    text-decoration: none;
+}
+html{
+    font-size: 62,5%; /* 1rem = 10px */
+}
+#boiteJeu{
+   height: 80vh;
+   margin: 10vh 0;
+}
+.infoBulleCoeur{
+    width: 500px;
+    
+}
+.hide{
+    display: none;
+}
+body{
+    font-size: 1.4rem;
+    font-family: arial;
+    color: white;
+}
+/* .container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E2337;
+} */
+h1{
+    color: red;
+}
+/* --------------------------------------- */
+#btn-red{
+    background-color: red;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+    
+    animation-name: rouge;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#btn-red a{
+    height: 60px;
+    width: 60px;
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+/* @keyframes rouge{
+    0%{left: 0px; top: 0px;}
+    25%{left: 200px; top: 0px;}
+    50%{left: 200px; top: 200px;}
+    75%{left: 0px; top: 200px;}
+    100%{left: 0px; top: 0px;}
+} */
+/* ------------------------------------------ */
+#btn-blue{
+    background-color: green;
+    height: auto;
+    width: 100px;
+    border-radius: 5%;   
+    position: relative;
+    
+    color: white;
+    
+    
+}
+div title{
+    color:red;
+    font-size: large;
+    font-weight: 900;
+    background-color: blue;
+
+}
+.btn-js1{
+    animation-name: bleu;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+}
+.btn-js2{
+    animation-name: bleu1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+}
+.btn-js3{
+    animation-name: bleu2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;  
+}
+@keyframes bleu{
+    0%{left: 0px; top: 0px;}
+    25%{left: 0px; top: 200px;}
+    50%{left: 200px; top: 200px;}
+    75%{left: 200px; top: 0px;}
+    100%{left: 0px; top: 0px;}
+}
+
+@keyframes bleu1{
+    0%{left: 100px; top: 0px;}
+    25%{left: 0px; top: 200px;}
+    50%{left: 200px; top: 70px;}
+    75%{left: 200px; top: 0px;}
+    100%{left: 180px; top: 200px;}
+}
+@keyframes bleu2{
+    0%{left: 50px; top: 0px;}
+    25%{left: 100px; top: 0px;}
+    50%{left: 200px; top: 70px;}
+    75%{left: 0px; top: 200px;}
+    100%{left: 180px; top: 200px;}
+}

@@ -1,0 +1,88 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+    font-size: 62.5%;
+    --color_black:#191919;
+    --color_white:#fff;
+    --font_lora:"Lora", serif;
+}
+body{
+    background-color: var(--color_black);
+    color: var(--color_white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+a, h1{
+    font-family: var(--font_lora);
+}
+h2{
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+}
+header{
+    /* dans le header j'applique le display flex avec ma valeur flex afin de pouvoir aligné/ eloigner/ gérer l'enplacement de mes éleéments sur l'axe principal(horizontal) et l'axe secondaire (vertical)*/
+    
+   
+    background-color: #101010;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, .1);
+    box-shadow: rgba(255, 255, 255, .5);
+    
+    
+}
+header a img{
+    width: 60px;
+}
+
+header nav a{
+    font-size: 1.6rem;
+    color: gray;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: all linear 0.2s;
+    text-decoration: none;
+    list-style: none;
+   
+   
+}
+header >a{ 
+    /* j'aplique le flex afin de centrer l'image dans l'élément a*/
+    display: flex;
+    align-items: center;
+    
+}
+header nav {
+    display: flex;
+   
+}
+a:hover{
+    color: var(--color_white);
+    scale: 1.2;
+
+} 
+/* Footer */
+footer{ 
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    padding: 40px;
+    background-color: #101010;
+    border-top: 0.1rem solid rgba(255, 255, 255, .1);
+    box-shadow: rgba(0, 0, 0, .5);
+    
+} 
+footer a{
+    color:(var(--color_white));
+}  
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    width: 33.33%;
+}
+
+footer ul:nth-child(2){
+    border-left: 1px ridge grey;
+    border-right: 1px ridge grey;
+    margin-bottom: 2rem;    
+}

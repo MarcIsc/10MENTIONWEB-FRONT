@@ -1,0 +1,54 @@
+
+#logo{
+    width: 90px;
+}
+#av{
+    height: 500px !important;
+    width: auto;
+}
+main div div:nth-child(1){    
+    width: auto;
+    height: 300px;
+    background-color: red;
+    line-height: 300px;
+    background-image: url(../img/s1b1.jpeg);
+    background-size: cover;
+}
+main div div:nth-child(2){
+    width: auto;
+    height: 300px;
+    background-image: url(../img/s1b2.jpeg);
+    background-size: cover;
+    line-height: 300px;
+}
+main div div:nth-child(3){
+    width: auto;
+    height: 300px;
+    background-color: green;
+    background-image: url(../img/s1b3.jpeg);
+    background-size: cover;
+    line-height: 300px;
+}
+#energie{
+    height: auto !important;
+    width: auto;
+}
+footer a{
+    color:(var(--color_white));
+}  
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    width: 33.33%;
+}
+footer ul:nth-child(2){
+    border-left: 1px ridge grey;
+    border-right: 1px ridge grey;
+    margin-bottom: 2rem;    
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+
+

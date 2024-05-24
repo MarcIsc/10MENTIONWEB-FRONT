@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"> -->
+<link rel="stylesheet" href="/07_les_formulairesCSS.css">
+    <title>Les formulaires en HTML</title>
+</head>
+<body>
+    <h1>Mon premier Formulaire HTML</h1>
+    <!--  
+        Le formulaire sert a récupérer des données que l'utilisateur va entrez et les envoyer au serveur pour un traitement(en PHP par exemple) : login, formulaire de contact, et même de tchat facebook 
+    -->
+    <!-- 
+        Je déclare le formulaire avec la  balise : <form> qui est une balise essentiel, elle permet d'indiquer le début d'un formulaire, dont on se servira énormément en développement. 
+            Cette balise fonctionne avec deux attribut essentiels: 
+            -action: permet d'indiquer où l'on récupère les données envoyés par l'utilisateur. Il permet d'indiquer l'adresse de la page où du fichier qui va traiter les informations envoyé par le formulaire.
+
+            -method: L'attribut métod permet d'indiquer si on récupère les donnés ou bien, on les envoies. 
+            Exemple: lorsque l'on s'inscrit sur un site , on envoie les donnés vers la base de données(BDD) lorsque l'on se connecte, on récupère et vérifie des données qui se trouve déja dans une BDD, il existe 2 méthodes: 
+                -> method="get" : les information sont passés dans la barre d'adresse
+
+                -> method="post" : on  envoie les données dans le corp de la requette sans passer par la barre d'adresse, c'est la méthode la plus utilisé et la plus sécurisé. 
+            
+    -->
+
+    <form action="#" method="post" enctype="multipart/form-data" autocomplete="off">
+        <!--
+            enctype= "multipart/form-data" : on l'utilise   quand on à un champs d'envoie de fichier dans le formulaire  
+        -->
+        <!--  
+            Lorsque la valeur de l'attribut autocomplete est défini sur "off", cela signifie que les navigateurs ne doivent pas suggérer ou compléter automatiquement les valeurs des champs de formulaire basées sur l'historique de saisie de l'utilisateur 
+        -->
+
+        <!--début du formulaire -->
+        <fieldset>
+            <!-- 
+                fieldset permet d'assembler des éléments de notre formulaire lorqsqu'ils sont en liens
+            -->
+            <legend>Nom et Prénom</legend>
+            <!-- 
+                Label désigne l'étiquette du champ, elle permet de définir et d'informer sur l'info attendu. 
+            -->
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom de famille" required>
+            <!-- 
+                input : elément de saisie de formulaire : son  apparence repose grandement sur la valeur de l'attribt "type" qui l'accompagne 
+            -->
+            <!-- 
+                input avec type : 
+                "text"          -> zone de text monoligne
+    
+                "name"          -> pour récupérer la valeur en PHP (pas d'espace, ni accent, ni caractère spéciaux)
+    
+                "placeholder"   -> (garder la place) : exemple de contenu valable, informez   l'utilisateur   de ce qui est attendue.
+    
+                "required"      -> Indique que le champs doit etre renseigner, cest un attribut particulier: il n'a pas de valeur. 
+    
+            -->
+            <div>
+                 <label for="#">Prénom </label>
+                 <input type="text" id="prenom" name="prenom" placeholder="Votre prénom"  maxlength="15" required>
+                 <!-- 
+                    "maxlength" -> le nombre de caractères maximum
+                  -->
+             </div>
+
+                <div>
+                  <label for="#">Votre date de naissance</label>
+                  <input type="date" name="dateDeNaissance" id="dateDeNaissance">
+                  <div>
+                    <label for="age">Votre age</label>
+                    <input type="number" name="age" id="age">
+                    <!-- type number -> permet d'entrer seulement un nombre -->
+                </div>
+
+            </div>
+
+            <div>
+               <div>
+                    <input type="radio" name="age1" value="moins15" 
+                    id="moins15">
+                    <label for="moins15">Moins de 15ans</label>
+               </div>
+                <div>
+                    <input type="radio" name="age1" value="entre15-25" 
+                    id="15-25">
+                    <label for="15-25">15 - 25</label>
+                </div>
+                <div>
+                    <input type="radio" name="age1"value="entre25-40" 
+                    id="25-40" checked>
+                    <label for="25-40">25- 40</label>
+                </div>
+                <div>
+                    <input type="radio" name="age1" value="plus40" 
+                    id="vieux">
+                    <label for="vieux">Encore plus vieux que ça !!!!</label>
+                </div>                
+
+            </div>
+
+            <div>
+
+                <label for="telephone">telephone</label>
+                <input type="tel" name="telephone" id="telephone" pattern="^[0-9]{10}">
+                <!-- 
+                    type tel ->  permet d'afficher les claviers chifré pour les smartphones 
+                -->
+                <!-- 
+                    pattern : est une expression rationnel à laquelle doit correspondre le texte saisie pour être valide.
+                 -->
+
+            </div>
+
+            <div>
+                <label for="photo">Photographie</label>
+                <input type="file" name="photo" id="photo">
+                <!-- 
+                    type file -> permet l'envoie d'un fichier
+                 -->
+
+                <div>
+
+                    <label for="Pays">Vous résidez en : </label>
+                    
+                    <!-- 
+                        Indique le début et la fin de la liste déroulante 
+                    -->
+                    <select name="pays" id="pays">
+                         <!-- 
+                        la balise select vient toujours avec des options : elle permet de faire un menu déroulant, on l'a retrouve souvent pour l'annéde naissance ou encore le département dans lequel on vit.
+                    -->
+                    <!-- 
+                        grouper les options : séparer les pays en fonction de leurs continent
+                    -->
+                        <optgroup label="Europe">
+
+                            <option value="france">France</option>
+                            <option value="espagne">Espagne</option>
+                            <option value="italie">Italie</option>
+                            <option value="royaume-uni" selected>Royaume-Uni</option>
+                            <!-- 
+                                l'attribut selected est utilisé pour définir un élément d'une liste deroulante est sélectionné par défault lorsque la page est chargée
+                             -->
+
+                        </optgroup>
+
+                        <optgroup label="Amérique">
+
+                            <option value="canada">Canada</option>
+                            <option value="etat-unis">Etat-Unis</option>
+
+                        </optgroup>
+
+                        <optgroup label="Asie">
+
+                            <option value="chine">Chine</option>
+                            <option value="japon">Japon</option>
+
+                        </optgroup>
+
+                    </select>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        
+
+      
+        </div>
+
+        <fieldset>
+
+            <legend>
+                Information de connexion
+            </legend>
+
+            <div>
+                <div>
+                    <label for="pseudo"></label>
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Renseignezvotre pseudo" required>          
+                </div>
+
+                <div>
+                    
+                    <label for="mdp"></label>
+                    <input type="password" name="mdp" id="mdp" placeholder="Renseignezvotre mot de passe" required> Mot de passe
+                    <!-- div>label+input:password -->
+                    <!-- 
+                        le type password -> permet de masquer le mot de passe 
+                    -->
+                </div>
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" placeholder="Votre email">
+                    <!-- 
+                        type email -> permet à l'utilisateur de saisir un email, lavaleur va être automatiquement validé et vérifiée 
+                    -->
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Vos prochaine vacanse</legend>
+            <div>
+                <label for="#">Choisissez votre destination</label>
+                
+            </div>
+
+            <div>
+                <input type="checkbox" name="voyage" id="destination" value="chine"> En Chine
+                <input type="checkbox" name="voyage" id="destination" value="autriche"> En Autriche
+                <input type="checkbox" name="voyage" id="destination" value="mars"> Ou sur Mars (Retour non garanti)
+            </div> 
+            <div>
+
+                <label for="">Avez vous une précision à apporter<label> 
+                    <br>
+
+                <textarea 
+                name="commentaire" id="commentaire" cols="30" rows="10">
+                </textarea> 
+
+            </div>
+
+        </fieldset>
+
+        <div class="envoie">
+
+            <input type="submit" value="s'inscrire">
+            <!-- 
+                pour envoyer notre formulaire, on utilise l'input de type submit 
+            -->
+            <input type="reset" value="Effacer">
+            <!-- 
+                Pour vider le formulaire / remise à zéro 
+            -->
+
+            <input type="button" value="boutton inactif">
+            <!-- 
+                Il existe d'autre type d'input:
+                - type="url" => saisir une adresse absolue
+                - type="color" => saisir une couleur
+                - type="search" => créer un champ de recherche
+                - Différents types de chaps de séléction  de date existent:
+                date: pour la date (05/08/1989 par exemple)
+                time: pour l'heure (13:37 par exemple)
+                week : pour la semaine;
+                month: pour le mois;
+                datetime : pour la date et l'heure ( avec gestion du décalage horaire)
+                datetime-local: pour la date et l'heure (sans gestion du décalage horaire)
+             -->
+
+        </div>
+        
+        
+
+
+
+    </form>
+
+
+</body>
+</html>

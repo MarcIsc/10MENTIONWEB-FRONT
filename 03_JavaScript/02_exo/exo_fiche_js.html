@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo fiche JS</title>
+</head>
+<h1 id="Titre"></h1>
+<body>
+    <script>
+        let br = "<br>"
+        document.write('<h1> Exercice fiche JS </h1>');   
+        document.write(br);
+        
+        let age = parseInt(prompt("Quel est votre age ?"));
+        if(1 <= age && age <= 6){
+            document.write("Vous êtes un jeune enfant")
+        }
+        else if(7 <= age && age <= 11){
+            document.write("Vous etes un enfant qui a atteint l'age de raison")
+        }
+        else if(12 <= age && age <= 17){
+            document.write("Vous êtes un adolescent")
+        }
+        else if(18 <= age && age <= 120){
+            document.write("Vous êtes un adulte")
+        }
+        else{
+            document.write("Erreur !!!!!")
+        };
+
+        var prenoms = '', prenom; // On crée une variable prenoms pour mémoriser
+        while (true) {
+        prenom = prompt('Entrez un prénom :'); // L'utilisateur entre chaque prenom
+        if (prenom) {
+        prenoms += prenom + ' '; // Ajoute le nouveau prénom ainsi qu'une espace
+        } else {
+        break; // On quitte la boucle
+        }
+        } alert(prenoms); // Affiche les prénoms à la suite
+
+        let Prenom = prompt("Quel est votre prenom ?: ")
+
+        let Utilisateur = [
+            {prenom: "marc" , nom: "isaac" , numero: "0745529939"},
+            {prenom: "jean" , nom: "jacky" , numero: "0645329567"}
+
+    ];
+    console.table(`${Utilisateur[0].prenom}`);
+
+    //---------------------------------------------------------------------//
+
+    // Supposons que vous avez un tableau d'objets ressemblant à ceci :
+let utilisateurs = [
+    { nom: "utilisateur1", prenom: "prenom1", motDePasse: "motdepasse1" },
+    { nom: "utilisateur2", prenom: "prenom2", motDePasse: "motdepasse2" },
+    // Ajoutez d'autres utilisateurs au besoin
+];
+
+// Fonction pour vérifier la connexion
+function verifierConnexion(nomUtilisateur, motDePasse) {
+    // Parcourir le tableau d'utilisateurs
+    for (let utilisateur of utilisateurs) {
+        // Vérifier si le nom d'utilisateur correspond et si le mot de passe correspond également
+        if (utilisateur.nom === nomUtilisateur && utilisateur.motDePasse === motDePasse) {
+            return true; // La connexion est possible
+        }
+    }
+    // Si aucun utilisateur correspondant n'est trouvé, la connexion est impossible
+    return false;
+}
+
+// Exemple d'utilisation de la fonction pour vérifier une connexion
+let nomUtilisateur = prompt("quel est votre nom");
+let motDePasse = prompt("Quel est votre mot de passe ? ");
+if (verifierConnexion(nomUtilisateur, motDePasse)) {
+    document.write("Connexion réussie !");
+} else {
+    document.write("Nom d'utilisateur ou mot de passe incorrect !");
+}
+//µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ//
+
+let moyenne = prompt("Indiquez la moyenne ici : ")
+
+if( 10 <= moyenne && moyenne <= 11);{
+    document.write("Tu passe sans mention !")
+}
+if( 11 <= moyenne && moyenne <= 20){
+    document.write("Reçu avec mention !")
+
+}
+else{
+    document.write("la moyenne doit etre comprise entre 0 et 20")
+}
+
+
+    </script>
+</body>
+</html>

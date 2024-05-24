@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    box-sizing: border-box;
+    text-align: none;
+}
+:root{
+    font-size:62.5%;
+    --font : font-family: "Roboto Slab", serif;
+    --orange : #e74C3C;
+    --white : #fff;
+    --hover-btn : ;
+    --btn-white-hover: ;
+    --bg-icon : rgb(71,71,71);
+}
+hr{
+    width: 11rem;
+    color: var(--orange);
+    margin-bottom: 2.5rem;
+    height: .15rem;
+    
+}
+
+nav{
+    padding: 1rem 8rem !important;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#entete{
+    background-image: url(../images/hero-image.jpg);
+    background-size: cover;
+    background-position: top;
+    color: var(--white);
+}
+h1{
+    font-size: 4.5rem;
+    font-family: var(--font);
+}
+p{
+    font-size: 1.5rem;
+}
+.btn{
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 1.5rem;
+}
+.btn:hover{
+    background-color: var(--hover-btn); /* renseigner la valeur de la variable */
+    background-color: var(--bg-icon) !important;
+    color: var(--white);
+}
+/* Main */
+h3{
+    font-size: 2.2rem;
+    color: var(--orange);
+    font-family: var(--font);
+    font-weight: bolder;
+}
+span{
+    color: var(--orange);
+}
+.btn-outline-secondary{
+    color: var(--orange);
+}
+i{
+    background-color: var(--bg-icon);
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1.7rem;
+} 
+h4{
+    color: var(--orange);
+    font-family: var(--font);
+    margin: 4rem 0 1rem 0;
+    font-size:1.8rem
+}
+footer{
+    
+        background-color:var(--orange);
+        padding: 15rem 5rem 2rem;
+    }
+    
+@media screen and (max-width:460px) {
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+}
+@media screen and (min-width:768px) {
+    header button{
+        font-size: 1.7rem;
+        padding: 0;
+    }
+    
+}
+
+
+
+/* ************************************* hover sur la class TEAM ****************************************** */
+
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    background-size: cover;
+    background-position: center;            
+}
+.team:hover{
+    border-radius: 14px; 
+}
+#joanne{    
+    background-image: url(../images/joanne.jpg);
+            
+}
+#manuel{
+    background-image: url(../images/manuel.jpg);
+        
+}
+#gaston{
+    background-image: url(../images/gaston.jpg);
+            
+}
+#tracy{
+    background-image: url(../images/tracy.jpg);
+            
+}
+/* *****************************fin hover sur la class TEAM ********************************************* */
+    
+
+main a {
+    color: var(--orange);
+}
+
+
+main a:hover{
+    color:var(--hover-btn);
+}

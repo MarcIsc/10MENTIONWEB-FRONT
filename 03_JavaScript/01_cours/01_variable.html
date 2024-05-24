@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables en JS</title>
+</head>
+<body>
+    <!-- Script directement dans le document HTML -->
+    <!-- Il faut mettre les balises ouvrantes et fermantes a la fin du document avant la fermeture de body -->
+
+
+  <script>
+    // commentaire sur une seul ligne.
+
+    /*
+        commentaire 
+        sur 
+        plusieurs 
+        lignes
+    */
+    ////////////////////////////////////////////////////////////////
+
+    //----------------------------
+        // LES VARIABLES
+    //----------------------------
+
+    /* les variables sont commes des boites.
+        Vous pouvez y stocker ce que vous souhaitez.
+        On initialise une variable avec son nom (de votre choix),
+        puis on lui attribut une valeur.
+        Pour déclarer une variable en javaScript, on utilise un préfixe :
+        cons, let, ou var.
+        ATTENTION : on utilise les préfixe seulement lors de l'initialisation
+    */
+    
+    const TEST = "HELLO World" ;
+    console.log(TEST) ; // console.log permet d'afficher une information que je viens de saisir pour une erreur produite lors de la programmation.
+
+    // La déclaration const permet de créer une constante accessible uniquement en lecture. Sa valeur ne pourra pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
+    
+    // Dans la convention, on écrit les constantes en majuscules pour les reconnaître.
+
+    //TEST = "Hello guy" ;
+    console.log(TEST)
+    // Provoque une erreur : une constante ne peut pas être modifiée.
+
+    var test1 =  10; 
+    var test2 = "10";
+    // console.log(test1);
+    // console.log(test2);
+
+    // var est globale, ce qui signifie qu'elle est accessible dans toute la fonction ou le script où elle est déclarée.
+    // Vous pouvez redéclarer une variable avec var dans le même contexte sans erreur. Cependant, cela peut conduire à des erreurs difficiles à détecter dans votre code en raison de la portée de var.
+
+    let test3 = "Colombbus";
+    //console.log(test3);
+    test3 = "10MentionWeb";
+    console.log(test3);
+
+    // let est locale au bloc dans lequel elle est déclarée, ce qui signifie qu'elle n'est accessible qu'à l'intérieur du bloc (par exemple, une boucle for ou un bloc if).
+        // Vous ne pouvez pas redéclarer une variable avec let dans le même contexte (fonction ou bloc). Vous obtiendrez une erreur  ReferenceError.
+
+
+
+
+
+
+
+  </script>  
+</body>
+</html>

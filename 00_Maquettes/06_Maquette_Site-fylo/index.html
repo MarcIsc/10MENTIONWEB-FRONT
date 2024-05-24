@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Fylo</title>
+</head>
+<body class="">    
+    <header class=" container ms">  <!-- Le header   -->
+        <nav class="navbar bg-body-tertiary"> <!-- Nav Bar Bootstrap -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="assets/img/logo.svg" class="img-fluid  col-8" alt="logo fylo"></a>
+                <div class=" d-flex  justify-content-end  mx-5 col-5   ">
+                    <div class="row justify-content-end  fw-bold  col-12 lg-8 ">
+                        <a class="nav-link col-3" href="#">Fealures</a>
+                        <a class="nav-link col-3" href="#">Team</a>
+                        <a class="nav-link col-3" href="#">Sign In</a>
+                    </div>
+                
+                </div>
+            </div>
+        </nav>
+    </header>  
+    <main  >
+
+        <!-- Premiere section : image d'illustration1 et titre avec input et boutton  -->
+        <section id="S1" class=" d-flex flex-wrap justify-content-evenly ">
+
+            <div class="col-12 col-sm-6 my-5 mx-auto order-sm-2 "> <!--la class order-sm-2 sert a modifié l'ordre d'affichage de l'élément a partir du pointbreack sm  -->
+                
+                <img src="assets/img/illustration-1.svg" alt="" class="img-fluid order-sm-1 col-10">
+
+            </div>                
+            
+            <div class="col-sm-6 col-12 mx-auto d-flex flex-wrap  order-sm-1  ">
+                
+                <h1 class="text-center  col-10 fs-1 mt-5 ms-3 fw-bold ">
+                    All your files in one secure location, accessible anywhere
+
+                </h1>
+                <p class="col-10 ms-3   ">
+                    Fylo stores you most important files in one secure location. Access them wherever you nees, share and collaborate with friends, family, and co-workers.
+
+
+                <form id="form1" action="#" method="post" class="text-center d-flex flex-wrap col-11 justify-content-evenly   ">
+                    <input id="input1"  type="text" placeholder="  john.wik@gmail.com" class=" Inputt col-12 col-lg-7 border-black bs-popover-auto rounded-1 " >
+                    <button class=" Inputt col-12 col-lg-3 btn btn-primary  mt-lg-0 mt-2 ">Get Started</button>
+                    <small id="small" class="hide">Ce champ ne peut pas etre vide</small>
+                </form>
+                    
+            </div > 
+
+        </section>          
+            
+        <section class=" d-flex flex-wrap row my-5 mx-auto  justify-content-between   col-12">
+
+            <div class="col-12 col-lg-4   order-sm-1  ">
+                
+                <img src="assets/img/illustration-2.svg" alt="" class="img-fluid col-12  mx-auto order-sm-1">               
+                
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-between col-12 col-lg-8 ">
+                <div class="  col-lg-10 ">
+                    <h1 class="mt-5 fs-5 fw-bold text-start   col-10">Stay productive, wherever you are
+                    </h1>
+                    <p class="col-10 col-lg-4  text-start ">Never let location be an issue when accessiong your files. Fylo has you covered for all of file strorage needs.</p>
+                    <br>
+                    <p class="text-start">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachements required!
+                    </p>
+                    <a href="#" class="   text-success my-4  col-4 col-lg-8 ">See how Fylo works <i class="fa-solid fa-circle-arrow-right" style="color: #63E6BE;"></i> </a>
+                    
+                </div>
+                <!--: image d'apostrophe, paragraphe, photo arrondi, nom, et petit p. encadré  -->
+                <div class=" d-flex flex-wrap justify-content-start  col-lg-4 bg-gradient p-2 mt-5  rounded-2 shadow    ">
+                    <!-- icon Apostrophe-->
+                    <i class="fa-solid fa-quote-left"></i><br>
+                    <!-- Le paragraphe-->
+                    <p id="fylo" class="text-start  ">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has becom a well-oiled collaboration machine.
+                    </p>
+                    <br>
+
+                    <div class="container d-flex justify-content-start">
+                        <div id="kyle" class="row  col-10">
+                            
+                            <div class="  d-flex flex-wrap ">
+                                <div class="col-3 ">
+                                    <img id="kyleImg" src="assets/img/avatar-testimonial.jpg" class=" rounded-circle img-fluid" alt="">
+                                </div>
+                                
+                                <div class=" col-9    ">
+                                    <h2 class="col-12">Kyle Burton</h2>
+                                    <p class="col-12  ">Founder & CEO, Huddle</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>            
+    
+    </main>
+
+   
+    <footer class="">
+        <div class="container-fluid flex-wrap f1">
+
+        <div class="row">
+
+            <!-- Cette Div contient les éléments du H2 et du P du footer zone violet clair -->
+            <div class=" ms-3 mx-lg-0 d-flex flex-wrap justify-content-center justify-content-lg-end  text-lg-start  col-10 col-lg-4 text-center">
+                <h2 class="col-10 lh-base mt-3 text-lg-start ms-3 mx-lg-0 text-white col-lg-10">Get early access today</h2>
+                <p class="text-white col-8 col-lg-10">it only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+                </p>
+            </div>
+            <!-- ----------------------------------------------------- -->
+
+            <!-- Cette Div contient : les éléments du formulaire avec un background violet clair -->
+            <div class="mx-auto  col-10 col-lg-8  my-5 d-flex flex-column align-items-center ">
+                <form id="form2" action="#" class=" text-center col-12 mx-auto ">
+                    <div class="col-10 col-lg-6 mx-auto mt-3 d-flex flex-column align-items-start ">
+                        <input id="input2" type="text" class="col-11  mb-2" placeholder=" john.wik@gmail.com" >                             
+                        <button class="btn btn-primary col-11  mx-lg-0  justify-content-end col-lg-5  ">Get started for free</button> 
+                        <small id="small1" class="hide col-11">Ce champ ne peut pas etre vide</small> 
+                    </div>
+                </form>
+            </div>
+            <!-- ------------------------------------------------------- -->
+        </div>
+
+        <div class="row f2 p-5 text-white ">
+            <div class="col-12 col-sm-3">
+                <img src="assets/img/logo_w.svg"  alt="">
+            </div>
+            <div class="row">
+                <ul class="col-sm-3">
+                    <li class=""><img src="assets/img/icon-phone.svg"  class="mb-3 me-3 mt-3  " alt="image phone"> Phone: +1-543-123-4567</li>
+                    <li class=" "><img src="assets/img/icon-email.svg" class="mb-3 me-3 mt-3  " alt="image email"> Exemple@fylo.com</li>
+                </ul>
+                <ul class="col-sm-3">
+                    <li class="py-2">About Us</li>
+                    <li class="py-2">Jobs</li>
+                    <li class="py-2">Press</li>
+                    <li class="py-2">Blog</li>
+                </ul>
+                <ul class=" col-12 mx-auto col-sm-3 ">
+                    <li class="py-2">contact Us</li>
+                    <li class="py-2">Terms</li>
+                    <li class="py-2">Privacy</li>
+                </ul>
+                <ul class="col-12 col-sm-3 justify-content-center d-flex d-inline">
+                    <li class="mx-2 "><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="mx-2 "><i class="fa-brands fa-twitter"></i></li>
+                    <li class="mx-2 "><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div> 
+    </footer>
+
+    <script src="https://kit.fontawesome.com/e62e283fda.js" crossorigin="anonymous"></script> <!-- lien fontawesome --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-   YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- lien bootstrap --> 
+    <script src="assets/js/script.js"></script> <!-- Script perso -->  
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* ********************exercice 2******************** */
+
+section{
+    width: 50% ;
+    margin: 100px auto;
+    text-align: center;
+    
+}
+
+#zoning1{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffd6d6;
+}
+#zoning1 header{
+    background-color: #f7f39a;
+    width: 100%;
+}
+h3{
+    width: 100%;
+}
+
+#zoning1 aside, #zoning1 section {
+    height: 500px;
+    line-height: 500px;
+}
+
+#zoning1 header {
+    background-color: #F7F39A;
+}
+
+#zoning1 aside{
+    background-color:#10828C;
+    width: 20%;
+    
+}
+
+#zoning1 section{
+    background-color: #a0b08b;
+    width: 80%;
+    margin: 0;
+}
+
+
+
+/* *************************************************** */
+/****** Maquette 2  ************************************/
+/* *************************************************** */
+
+#zoning2{
+    background-color: #ffd6d6;
+    text-align: center;
+}
+
+#zoning2 header{
+    background-color: teal;
+    height: 70px;
+    line-height: 70px;
+}
+
+#zoning2 div{
+    display: flex;    
+}
+
+#zoning2 aside{
+    background-color: tomato;
+    height: 500px;
+    line-height: 500px;
+    width: 20%;
+}
+
+#zoning2 div div{
+    width: 60%;
+    line-height: 500px;
+    height: 500px;
+}
+
+#zoning2 div div p {
+    width: 100%;
+}
+
+#zoning2 div aside:nth-child(1){
+    order: 1;
+}
+#zoning2 div aside:nth-child(2){
+    order: 3;
+}
+#zoning2 div aside:nth-child(3){
+    order: 2;
+}

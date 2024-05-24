@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="08_les_tableaux.css">
+    <meta name="description" content="les tableaux en HTML">
+    <meta name="author" content="Marc ISAAC">
+    <title>Les tableaux en HTML</title>
+</head>
+<body>
+    <h1>un tableaux, pour les données "tabulaires"</h1>
+    <!--la balise table définit le début d'un tableau-->
+    <table>
+        <caption>Vente de la semaine</caption> <!-- Titre de tableau -->
+
+        <thead>
+            <tr>
+                <th>Jour</th><!--les en tête des colonnes-->
+                <th>Smartphones</th>
+                <th>Tablettes</th>
+                <th>Ordinateurs</th>
+            </tr><!--table row : rangé du tableau-->
+
+        </thead><!--l'en tête du tableau-->
+
+        <tbody>
+            <tr> <!-- table data : cellules du tableau : colonne-->
+                <td>Lundi</td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>11</td>
+                <td>9</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>14</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>13</td>
+                <td>10</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>15</td>
+                <td>10</td>
+                <td>5</td>
+            </tr>
+        </tbody> <!--Le ecorp du tableau-->
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>80</td>
+                <td>90</td>
+                <td>76</td>
+            </tr>
+        </tfoot><!-- table foot : le pied du tableau-->
+        
+    </table>
+
+
+<!-- ********************************************************************** -->
+
+
+    <table  id="prédisent" >
+    <caption> tableau des présidents</caption>
+    <thead>
+    <tr>
+        <th>Nom </th>
+        <th>Téléphone</th>
+    </tr>
+    
+    <tr>
+        <td>DeGaulle</td> 
+        <td>mozardJacky@gmail.com</td>
+    </tr>
+        
+    </thead>
+    <tbody>
+    <tr>
+        <td>Chirac</td>
+        <td>0102030405</td>
+    </tr>
+    <tr>
+        <td rowspan="2" >Mail</td>
+        <td>mozard@gmail.com</td>
+    </tr>
+    <tr>    
+        <!-- <td>Sarko</td> -->
+        <td>0102030405</td>
+    </tr>
+    
+    <tr>
+        <!-- <td>>Macron</td> -->
+        <td>0102030405</td>        
+    </tr>  
+        
+    </tbody>
+    </table>
+
+    <!-- ****************************************** -->
+
+    <br><br><br><br><br>
+
+    <h2>rowspan colspan</h2>
+    <p>
+        <code>rowspan</code> est un attribut qui permet d'indiquer le nombre de ligne qu'une cellule <code>&lt;td></code> de tableau <code>&lt;table> </code> peut couvrir. Cet attribute est utile si vouys souhaitez qu'une cellule s'étende verticalement sur plusieur ligne. Exemple, si on met <code>rowspan="5"</code> alors notre cellule occupera l'espace de 5 cellule verticalement. Cependant, il est important de noter que lorsqu'on utilise cette manipujlation, il faut retirer les <em>td</em> correspondant au autres lignes.
+    </p>
+
+    <table  id="DemoRowspan" >
+        <caption> Démo Rowspan</caption>
+        
+        <tr>
+            <th>Nom </th>
+            <th>Mozard</th>
+        </tr>
+        <tr>
+            <td rowspan="2" >Mail</td>
+            <td>mozard@gmail.com</td>
+        </tr>
+        <tr>
+            
+            <td>mozardJacky@gmail.com</td>
+        </tr>
+            
+        
+        
+        <tr>
+            <td>Chirac</td>
+            <td>0102030405</td>
+        </tr>
+        <tr>    
+            <td>Sarko</td>
+            <td>0102030405</td>
+        </tr>
+            
+        
+    </table>
+
+    <!-- *********colspan***************** -->
+
+    <table  id="DemoColspan" >
+        <caption> Les languages WEB</caption>
+        
+        <tr>
+            <td colspan="3">Language de front</td>
+            
+            <td colspan="3">Language de back</td>
+            
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>javaScript</td>
+            <td>SQL</td>
+            <td>NoSQL</td>
+            <td>PHP</td>
+        </tr>
+        
+    </table>
+
+    <h2>exercices 2</h2>
+
+    <table id="exo2">
+        <caption>EXO pixel coeur</caption>
+        <!-- 1ere rangé -->
+        <tr>
+            <td colspan="7"></td>
+           
+        </tr>
+        <!-- seconde rangé -->
+        <tr>
+            <td></td>
+            <td colspan="2" class="rouge borderT"></td>
+            
+            <td></td>
+            <td colspan="2" class="rouge borderT"></td>
+            
+            <td></td>
+        </tr>
+        <!-- troisieme rangé -->
+        <tr>
+            <td></td>
+            <td colspan="2" class="rouge"></td>
+           
+            <td></td>
+            <td colspan="2" class="rouge"></td>
+            
+            <td></td>
+        </tr>
+        <!-- quatrieme rangé -->
+        <tr>
+            <td></td>
+            <td colspan="5" class="rouge"></td>
+            
+            <td></td>
+        </tr>
+        <!-- cinquieme rangé  -->
+        <tr>
+            <td></td>
+            <td colspan="5" class="rouge"></td>
+            
+            <td></td>
+        </tr>
+        <!-- sixieme rangé -->
+        <tr>
+            <td></td>
+            <td colspan="5" class="rouge"></td>
+            
+            <td></td>
+        </tr>
+        <!-- septieme rangé -->
+        <tr>
+            <td colspan="2"></td>
+            <td colspan="3" class="rouge"></td>
+            <td colspan="2"></td>
+            
+        </tr>
+        <!-- huitieme rangé -->
+        <tr>
+            <td colspan="3"></td>
+            <td class="rouge"></td>
+            <td colspan="3"></td>
+        </tr>
+        <!-- neuvieme rangé -->
+        <tr>
+            <td colspan="7"></td>
+            
+        </tr>
+
+    </table>
+
+        <br><br><br><br><br>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 Nombres en JS</title>
+</head>
+<body>
+    <script>
+        //-----------------------------
+            // les nombres et les calculs
+        //-----------------------------
+
+        // Pour initialiser un nmobre il suffit de l'écrire sans guillemets
+
+        const a = 5 * 10;
+        const b = 10 / 2;
+        const c = 15 - 5;
+        const d = 20 + 10; 
+        
+
+        // Nous pouvnos effectuer tout type de calcul
+        // addition
+        const f = a + b ;
+        console.log(f);
+        // le resultat de l'addition de a et B est egale a 55
+        document.write("Le résultat de l'addition de a et b est égale à "+ f + "<br>");
+        
+        
+        
+
+        //soustraction
+
+        const SOUSTRACTION = c - 4;
+        document.write(" Le résultat de la soustraction est : " + SOUSTRACTION + "<br>");
+
+        //Multiplication
+
+        const MULTIPLICATION = d * 5;
+        document.write(" Le résultat de D * 4 est : " + MULTIPLICATION + "<br>")
+
+        //Division
+
+        const DIVISION = d / 10;
+        document.write("Le résultat de la division est :" + DIVISION + "<br>");
+
+        //Modulo
+
+        const MODULO = b % 10;
+        document.write("le resultat du modulo est :" + MODULO + "<br>");
+
+        //---------------------------------------------------------------
+            // Racourcis
+
+        let g = 10;
+
+        // Premiere facon : 
+
+       // g = g + 5;
+        console.log(g);
+
+        //Deuxieme facon : 
+
+        g + 5;
+        document.write(g + "<br>");
+
+        //---------------------------------------------------------------
+        // Incrémentation
+        // Nous pouvons ajouter 1 ou enlever 1 avec ++ ou --
+
+        let h = 50;
+        h++;
+        document.write(h + "<br>");
+
+        h--;
+        document.write(h + "<br>");
+
+        let i = 1;
+
+        let j = i ++ ;
+
+        document.write( j + "<br>");
+        document.write( i + "<br>");
+
+        
+
+        //-------------------------------------
+
+        let valeur_prompt = prompt("indiquez le code secret")
+
+        let valeur_prompt_au_carrer = valeur_prompt * valeur_prompt ;
+        let valeur_prompt_au_cube = valeur_prompt * valeur_prompt * valeur_prompt * valeur_prompt ;
+
+        
+        alert('la valeur de prompt au carré est : ' + valeur_prompt_au_carrer + 'la valeur de prompt au cube est :'+ valeur_prompt_au_cube) ;
+        document.write
+
+
+
+
+
+
+         
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* Exercices flex */
+
+*{
+    box-sizing:border-box;
+    text-decoration: none;
+    
+    
+}
+body{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    
+}
+
+nav{
+    display: flex;
+    background-color:#F7F39A;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+nav a {
+    color: black;
+    font-weight: bold;    
+}
+/* ------------------------------------------------------ */
+
+.zone{
+   display: flex;      
+   text-align:center;
+   justify-content: space-evenly;  
+
+}
+
+.zone div{
+    height: 600px;    
+    
+}
+
+
+#ZG{
+    background-color: #10828C;
+    width: 20%;    
+    
+}
+
+#ZD{
+    background-color:#A0B08B;    
+    width: 80%;       
+}
+
+
+#ZM1{
+    background-color:#D8BFD8;
+    width: 100%;
+}
+
+#conteneurA{
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: 600px;
+    margin-bottom: 50px;
+}
+
+#ZD1, #ZG1{
+    background-color:#FF6347;
+    width: 20%;
+    height: 600px;
+}
+
+
+
+#HED{
+    display: inline-block;
+    background-color: #008080;
+    margin-top: 50px;
+    width: 100%;
+    padding: 25px;
+}
+h1{margin-top: 50px;}
+
+
+
+
+
+
+
+
+

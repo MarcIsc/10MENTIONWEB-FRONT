@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Les strings et la concaténation
+
+
+        // nous pouvons initialisé une chaine de caractère de plusieur façon : 
+
+        //avec des guillemets simple cote ( )
+        const PRENOM = 'Sahar';
+        
+        // avec des guillemet double 
+        const NOM = "Ferchichi";
+
+        // avec simple quote ou backslash ou antislash : permet d'échapper un caractère dans le string
+        const ADRESSE = 'j\'habite à Paris';
+
+        document.write(" je suis " + " " + NOM + " " + PRENOM + ' et ' + ADRESSE + '<br>');
+
+        const PRENOM2 = "marc" , NOM2 = "ISAAC";
+
+        document.write("je suis " + PRENOM2 + " " + NOM2 + "<br>");
+
+        // avec les backquote ( ** ) (altGr + 8) 
+        let bienvenue = ' Bonjour ous êtes les bienvenue : Marc et Sahar'
+        // Bonjour, vous etes les bienvenue
+       // let bienvenue = 'Bonjour vous êtes les bienvenue : ${PRENOM2} et ${PRENOM}';
+       // document.write(bienvenue);
+
+       let age = prompt("quel est votre age? ")
+
+       document.write("vous avez :" + age + " " + "ans" + "<br");
+
+       
+       
+
+       // 
+       let fruits = "Pommes";
+      
+
+       fruits += 'fraise';
+       fruits += 'banane';
+       document.write(fruits);
+       //contrairement au "=" d'affectation la valeur de la variable, j'utilise ici += qui va ajouter la nouvelle valeur à la valeur del a variable.
+
+       //------------------------------
+        //Convertir un string vers number 
+        //--------------------------
+
+        let unNumber = "24";
+
+        document.write(typeof(unNumber));
+        document.write("<br>");
+        unNumber = parsefloat(unNumber);
+        document.write(typeof(unNumber));
+
+        unNumber = unNumber.toString(); // permet de convertir un nombre en caractère.
+
+
+
+
+
+
+    </script>
+</body>
+</html>

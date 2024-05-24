@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice JS</title>
+</head>
+<body>
+
+    <script>
+        let tab1 = [" marc "," david "," jushua "," josé "," marvin " ];
+        let tab2 = [" isaac "," salomon "," jujuba "," fine "," gaia "];
+        let tab3 = [ 31,28,40,29,10];
+
+        let tab4 = [tab1,tab2,tab3];
+
+        console.table(tab4);
+        
+        for (let i = 0; i < tab1.length; i++) {
+            document.write(`${tab1[i]} ${tab2[i]} ${tab3[i]} <br>`);          
+        };
+
+        for (let i = 0;   i < tab2.length;  i++) {
+            document.write(`${tab1[i]} ${tab2[i]} ${tab3[i]} <br>`);    
+        };
+
+        document.write("<br>")
+
+        for (let i = 0; i < tab1.length; i++){
+            document.write(`${tab4[0][i]} ${tab4[1][i]} ${tab4[2][i]}`)
+        }
+        document.write("<br>");
+        document.write("<br>");
+//.............................................
+    // générateur de mot de passe ( fonction ) ------------------------------------------------------------------
+
+        function genererMotDePasse(longueur) {
+        var caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+        var motDePasse = "";
+
+        for (var i = 0; i < longueur; i++) {
+        var caractereAleatoire = caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+        motDePasse += caractereAleatoire;
+        }
+        return motDePasse;
+        };
+        
+        // Exemple d'utilisation : générer un mot de passe de 15 caractères
+        var motDePasse = genererMotDePasse(15);
+        document.write("voila le mot de passe généré : " + motDePasse);
+        console.log(motDePasse);
+    //-----------------------------------------------------------------------------------------------------------
+
+    // compte --------------------------------------------------------------------------------------------------------
+    
+        // tableau avec des objets.
+    var utilisateurs = [
+    { nom: "Doe", prenom: "John", motDePasse: "password1" },
+    { nom: "Smith", prenom: "Alice", motDePasse: "password2" },
+    { nom: "Brown", prenom: "Emma", motDePasse: "password3" }
+    ];
+
+    // Exemple d'accès aux informations d'un utilisateur
+    console.log("Nom: " + utilisateurs[0].nom);
+    console.log("Prénom: " + utilisateurs[0].prenom);
+    console.log("Mot de passe: " + utilisateurs[0].motDePasse);
+    
+    //------------------------------------------------------------------------------------------------------------
+
+    // vérificateur -----------------------------------------------------------------------------------------------
+    
+    let utilisateur = prompt("veuillez indiquez votre nom d'utilisateur");
+    motDePasse = prompt("indiquez votre mot de passe");
+    
+    // Fonction pour vérifier le mot de passe pour un utilisateur donné
+function verifierMotDePasse(utilisateur, motDePasse) {
+    // Parcourir le tableau des utilisateurs
+    for (var i = 0; i < utilisateurs.length; i++) {
+        // Vérifier si l'utilisateur existe
+        if (utilisateurs[i].nom === utilisateur) {
+            // Si l'utilisateur existe, vérifier si le mot de passe correspond
+            if (utilisateurs[i].motDePasse === motDePasse) {
+                return true; // Mot de passe correct
+                document.write("vous êtes connecter")
+            } else {
+                return false; // Mot de passe incorrect
+            }
+        }
+    }
+    // Si l'utilisateur n'est pas trouvé, retourner false
+    return false;
+}
+   // Exercice 7
+        /* 
+            Créer un script qui permet de :
+                - récupérer la moyenne de BAC à votre utilisateur
+                - vérifier si l'utilisateur a bien renseigner un nombre, 
+                si un nombre :
+                    => si la moyenne est supérieur ou égale à 0 et strictement inférieure à 10  -> afficher "tu es recalé !"
+                    => si la moyenne est entre 10 et 11 -> afficher "Tu passes, sans mention !"
+                    => si la moyenne et entre 12 et 20 -> afficher Reçu avec mention ! :) 
+                    => si la moyenne est inférieur à 0 ou supérieur à 20  -> afficher "La moyenne doit être comprise entre 0 et 20 ! :)"
+                Si ce n'est pas un nombre :
+                    =>afficher  "Vous n\avez pas saisi de nombre !"   
+        */
+
+
+
+
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+// Exercice 8
+        /* 
+
+            Créer un script qui permet de :
+                récuperer un nombre de l'utilsateur, 
+                le nombre doit être différent de 0 et positif
+                vérifier et afficher sur la page si ce nombre ainsi que ceux qui le suivent jusqu'au 10.
+                Si ce n'est pas un nombre :
+                    => afficher  "Vous n'avez pas saisi de nombre !"  
+                si un nombre :
+                    => si un nombre pair -> affiche " le nombre est pair"
+                    => si un nombre impair -> affiche " le nombre est impair"
+
+
+            créer un script JavaScript qui demande à l'utilisateur de saisir un nombre. Le script vérifiera d'abord si le nombre est différent de zéro et s'il est positif. Ensuite, il affichera sur la page web si ce nombre est pair ou impair, ainsi que pour les neuf nombres suivants jusqu'à 10.
+            
+            
+        */        
+let moyenne = parseFloat(prompt("Indiquez la moyenne ici : "))
+if( 1 <= moyenne && moyenne <= 9 ){
+    document.write("Votre moyenne est de  " + moyenne + " Vous n'avez pas la moyenne!!")
+}        
+else if( 10 <= moyenne && moyenne <= 11){
+    document.write("Votre moyenne est de  " + moyenne + " Tu passe sans mention !")
+}
+else if( 11 <= moyenne && moyenne <= 20){
+    document.write("Votre moyenne est de  " + moyenne + " Vous ete reçu avec mention ")
+
+}
+else if( 0 < moyenne || moyenne > 20){
+    document.write("La moyenne doit etre comprise entre 0 et 20!")
+
+}
+else{
+    document.write("Vous n'avez pas saisie de nombre")
+    document.write("<br>");
+    document.write("<br>");
+};
+
+//....................................................
+//Exercice 9
+
+        // Ecrivez un programme qui fait jouer l'utilisateur au "ni oui, ni non" : il entre un texte jusqu'à saisir "oui" ou "non", ce qui déclenche la fin du jeu. ( Utilisez la boucle while)
+
+let reponse = "";
+while (reponse.toLowerCase() !== "oui" && reponse.toLowerCase() !== "non") {
+    reponse = prompt("Veuillez saisir donnez une réponse:");
+}
+
+if (reponse.toLowerCase() === "oui") {
+    document.write("Sorry, vous avez saisi 'oui'. Vous avez perdu "+ "<br>");
+} else if (reponse.toLowerCase() === "non") {
+    document.write("Sorry, vous avez saisi 'non'. Vous avez perdu");
+} else {
+    document.write("on continue de jouer." + "<br>");
+};
+
+//Exercice 10
+
+        /* 
+            Écrivez un programme qui affiche tous les nombres entre 1 et 20 avec les exceptions suivantes :
+            il affiche "Grala" à la place du nombre si celui-ci est divisible par 3.
+            Il affiche "Bu" à la place du nombre si celui-ci est divisible par 5 et non par 3.
+            il affiche "Gralabu" à la place des nombres divisibles à la fois par 3 et par 5.
+        */
+    
+        //.......................
+
+        const nombre = 20;
+        for (let i = 1; i <= nombre; i++) {
+        if (i % 3 === 0 && i % 5 !== 0) {
+        document.write(" grala " + "<br>");
+        } else if (i % 5 === 0 && i % 3 !== 0) {
+        document.write(" bu "+ "<br>");
+        } else if (i % 3 === 0 && i % 5 === 0){
+        document.write(" gralabu "+ "<br>");
+        }
+        else{
+            document.write(i + "<br>")
+        }
+        };
+    //Exercice 11
+        /*
+            Créez un array vide = []
+            Puis créez une fonction qui prendra 2 paramètres: 2 nombres
+            Le seul but de la fonction sera de pousser le premier nombre à la suite de l'array
+            x fois, par rapport au 2eme nombre
+            Exemple: pousser(8, 5) => [8, 8, 8, 8, 8]
+        */
+
+        
+            //......................................
+            document.write("<br>")
+            let tableau = [];
+
+            let nombres = parseFloat(prompt("Entrez un nombre A ?"));
+            let fois = parseFloat(prompt("Entrez un nombre B ?"));
+
+            function pousser(nombres, fois) {
+            for (let i = 0; i < fois; i++) {
+            tableau.push(nombres);
+            }
+            document.write("tableau :" + tableau + "<br>")
+            tableau = [];
+            
+            };
+            pousser(nombres, fois);
+            pousser(5, 4);
+            console.table(tableau);
+
+            let maFonction = (nbr1, nbr2) => {
+                let table = [];
+                for (let i = 0; i < nbr2; i++){
+                    table.push(nbr1);
+                }
+                document.write('myArray = [' + table + '] <br>')
+            }
+            maFonction(10,20);
+            maFonction(9,7);
+
+            
+
+             //Exercice 13
+        /*
+            A l'aide de ce tableau et d'une boucle:
+        */
+
+        let clients = [
+            {
+               firstname: "Claire",
+              age: 28,
+           },
+            {
+                firstname: "Max",
+                age: 32,
+            },
+            {
+               firstname: "Léo",
+               age: 23,
+            },
+         ];
+
+        // Calculez et affichez dans le terminal la somme des âges.
+
+        /*
+        1ere facon de faire : Boucle for in 
+        for (let client of clients) {
+            totalAge += client.age // totalAge + client.age
+            }
+            document.write('la somme des âges : ${totalAge}');
+        }
+        */
+
+        // deuxieme facon de faire : Boucle for
+        totalAge = 0
+        for ( let i = 0; i < clients.length; i++){
+            
+            totalAge += clients[i].age;
+
+        } document.write(totalAge + '<br>');
+
+        let index = 0;
+
+        while(index < clients.length){
+            totalAge += clients[index].age
+
+            index++
+        }document.write(totalAge + '<br>');
+
+        let email = ('Veuillez renseignez votre adresse mail SVP');
+ 
+        let j
+        let i = 0
+
+        function VerifEmail(email){
+            while(i < email.length){
+                if (email[i] == "@"){
+                    j = email[i];
+                }
+                i++
+            }
+
+            if(j == "@"){
+                document.write ("reponse true")
+            }else{
+                document.write("reponse false")
+            }
+        };
+       VerifEmail(email);
+
+        // avec la fonction indexOf()
+
+        
+        function verif(email){
+           if(clients.indexOf('@') == true) {
+            document.write('pabon')
+           }else{
+            document.write('validé')
+           }
+
+
+        }
+        verif(email)
+
+            
+
+            
+
+
+        
+        
+        
+    </script>   
+</body>
+</html>

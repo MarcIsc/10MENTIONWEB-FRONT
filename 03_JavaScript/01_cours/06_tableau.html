@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux en JS</title>
+</head>
+<body>
+ <script>
+    //--------------------------
+        //les tableaux
+    //-------------------------
+
+    // les tableaux (array) sont extrêment utilisé en language de programation, et sont très puissant 
+    // Comme une variable, ils servent à stocker n'importe quel type de données mais en quantité illimité
+
+    //---------------------------
+        // tableau indexés
+    //---------------------------
+
+    // déclaré un tbleau indéxé //
+
+   /*  let monTableau = [] // premiere facon pour declarer un tableau
+    console.log(monTableau);
+
+    let myArray = new Array; // Deuxieme facon pour declarer un tableau
+    console.log(myArray);
+    document.write(myArray);
+
+    //Affecter des valeurs au tableau, plusieur methodes :
+
+        //A-
+        monTableau  = ["paul","adama","semir"]; //Chaque élément dans un tableau est séparé par une virgule.
+        console.log(monTableau);
+        document.write(monTableau)
+        console.table(monTableau)
+
+        //B-
+        myArray[0] = "cleid";
+        myArray[1] = "imane";
+        myArray[2] = "maurine";
+        myArray[3] = "gary";
+
+        console.log(myArray);
+        console.table(myArray);
+
+        // Pour sélectionner un élément de nore tableau, il suffit, d'appeller : monTableau[indexDésirer]
+
+        console.log(myArray[2]);
+
+        //REMARQUE
+
+        // Les string sont considéré comme une array
+        const PRENOM = 'sahar'
+        console.log(PRENOM[2]);
+
+        //--------------------------------------
+            //Exercice
+        //------------------------------------
+
+        console.table(myArray2);
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Exercice de disposition dans un tableau")
+        document.write("<br>")
+        document.write("<br>")
+        document.write(myArray[1] + " " + myArray2[0]);
+        document.write("<br>")
+        document.write(myArray[0]+ " " + myArray2[1]);
+        document.write("<br>")
+        document.write(myArray[2] + " " + myArray2[2]);
+        document.write("<br>")
+        document.write(myArray[3] + " " + myArray2[3]);
+        document.write("<br>")
+        document.write("<br>")
+        
+        let groupe1 = [myArray, myArray2];
+        console.table(groupe1)
+        document.write(groupe1[0][3]+ " "+ groupe1[1][3] + "<br>");
+        document.write(groupe1[0][2]+ " "+ groupe1[1][2] + "<br>");
+        document.write(groupe1[0][1]+ " "+ groupe1[1][0] + "<br>");
+        document.write(groupe1[0][0]+ " "+ groupe1[1][1] + "<br>");
+        document.write("<br>");
+        
+        /* 
+        créer un tableau multidimentionnel qui permet d'afficher cette ligne :
+            nom: ferchichi , prenom : sahar , téléphone : 0755555555
+            sachant que : nom , prenom et téléphone.      
+            
+            */
+           
+           /* let prenom = ["Marc"]
+           let nom = ["ISAAC"];
+           let telephone = ["0745529939"];
+           let appelation = ["nom:","prenom:","telephone:"];
+           
+           let id = [appelation, prenom, nom, telephone];
+           console.table(id)
+           document.write(" Exercice :Tableau multidimentionnel")
+           document.write("<br>")
+           document.write("<br>")
+           document.write(appelation[0] + " " + id[2][0] + ",  " + appelation[1] + " "  + id[1][0]+",  " + appelation[2] + " " + id[3][0]);
+           
+        // tableau assosiatif
+        
+        
+        let informations = {
+            prenom: "Marc",
+            nom: "ISAAC",
+            age: 32,
+            tel: 745529939
+        };
+        console.table(informations);
+        console.log(informations['age']);
+        console.log(informations.age);
+        
+        // Tableau multidimensionnel
+        
+        let contact1 = [
+            {
+                    prenom : "semir ",
+                    nom : "Sarajlic ",
+                    tel : "0102030405 "
+                },
+                {
+                    prenom : "Adama ",
+                    nom : "Cissoco ",
+                    tel : "0102030403 "
+                    
+                },
+                
+        ];
+        console.table(contact1);
+        document.write("<br>");
+        document.write("<br>");
+        document.write(contact1[0]['prenom'], contact1[0]['nom'], contact1[0]['tel'] +'<br>');
+        document.write(contact1[1]['prenom'], contact1[1]['nom'], contact1[1]['tel']); */
+        
+        // Tableau a quatre dimention
+        
+        let Array4Dimensions = [
+            {
+                prenom: "Marc",
+                nom: "Isaac",
+                coordonnees: {
+                    email: "marc.isaac@colombbus.org",
+                    tel: {
+                        fixe: 102030405,
+                        fax: 203040506,
+                        port : {
+                            prive:304050607 ,
+                            pro: 405060708,
+                        },
+                    },
+                    adresse : {
+                        ville: "Evry",
+                        cp: 91000,
+                        pays: {
+                            code: "fr",
+                            nom: "France",
+                            
+                        }
+                    },
+                    
+                }
+                
+            }
+        ];
+
+
+        // les propriété et les méthodes des tableaux
+        //*********************************************
+        myArray2 = ["najjahi","manigat","marolany","monteiro"];
+        
+        let couleurs = ["rose","rouge","noir","bleu"];
+        console.log(couleurs.length); // lenght est une propriété qui permet d'afficher le nombre d'éléments due contient mon tableau.
+        let longueurTableau = couleurs.length;
+        console.log(longueurTableau);
+        
+
+        // Ajouter un element en fin de mon tableau
+
+        couleurs.push("violet");
+        console.log(couleurs);
+        console.log(couleurs.length);
+
+        // pour supprimer le dernier élément de mon tableau: 
+
+        couleurs.pop("");
+        console.log(couleurs);
+        console.log(couleurs.length);
+
+        // ajouter un ou plusieur éléments au début du tableau
+
+        /*couleurs.unshift("vert", "orange");
+        console.log(couleurs);
+        console.log(couleurs.length); */
+
+        // ajouter ou supprimer des éléments nimporte où dans un tableau...
+
+        couleurs.splice(1,0, "jaune","blanc");
+        console.log(couleurs);
+        console.log(couleurs.length);
+
+        /*
+            Pour découper un tableau et en créer un autre, j'utilise la méthode slice()
+            // premier argument : La position de départ : où doit commencer la découpe de notre tableau de départ/ si la position passée est un nombre négatif -> le début de la découpe sera calculé à partir de la fin du tableau de départ/ si aucune position de départ n'est passée, la découpe commencera depuis le début du tableau de départ.
+
+            // Deuxième argument : la position où doit s'arrêter la découpe du tableau de départ/ si la position passée est un nombre négatif, alors la fin de la découpe sera calculée à partir de la fin du tableau de départ / si aucune position de fin n'est passée, alors on récupérera le tableau de départ jusqu'à la fin pour créer notre nouveau tableau
+        */
+
+       /* let jourTravail = jourSemaine.slice(0,5);
+       let jourTravailColombbus = jourSemaine.splice(2,1);
+       
+       
+       console.log(jourTravailColombbus);*/
+       
+       // ***************
+       //Pour retourner une chaine de caractère en concaténant les différentes valeur d'un tableau.
+       let jourSemaine = ["lundi ","mardi ","mercredi ","jeudi ","vendredi ","samedi ","dimanche "];
+        let concatJoursSemaine = jourSemaine.join("");
+        document.write(concatJoursSemaine);
+
+        // pour déterminer si un tableau contient une valeur précise : 
+
+        //let verif = jourSemaine.include("jeudi"); // attention : la methode include est sensible a la case.
+        
+        
+        // Pour fusionner plusieurs tableaux entre eux et en creer un nouveau : 
+
+        let totalTableau = jourSemaine.concat(couleurs, myArray2 );
+        document.write(totalTableau);
+
+
+
+
+        
+
+
+        
+ </script>   
+</body>
+</html>

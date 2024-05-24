@@ -1,0 +1,51 @@
+#logo{
+    width: 90px;
+}
+main{
+    height: 100vh;
+}
+main article:first-child section:first-child{
+    background-image: url(../img/s1b3.jpeg);
+    height: 200px;
+    margin: 20px 0 60px 0;    
+}
+#btn-success{
+    background-color: green;
+    color: white;
+}
+#btn-deny{
+    background-color: orange;
+}
+#btn-success:hover, #btn-deny:hover{
+background-color: cadetblue;
+}
+
+#message, #sujet{
+    height: 100px;
+    border-right: none;
+    border-left: none;
+}
+#email{
+    border-right: none;
+    border-left: none;  
+    border-top: none;
+}
+footer a{
+    color:(var(--color_white));
+}  
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    width: 33.33%;
+}
+footer ul:nth-child(2){
+    border-left: 1px ridge grey;
+    border-right: 1px ridge grey;
+    margin-bottom: 2rem;    
+}
+.hide{
+    display: none;
+}
